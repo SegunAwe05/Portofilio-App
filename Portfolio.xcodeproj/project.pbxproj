@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500988C82787D03A001E5008 /* SSToastMessage in Frameworks */ = {isa = PBXBuildFile; productRef = 500988C72787D03A001E5008 /* SSToastMessage */; };
 		50B7D73A278399000027B0C2 /* SmallCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D739278399000027B0C2 /* SmallCard.swift */; };
 		50B7D73C2785156C0027B0C2 /* TodoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D73B2785156B0027B0C2 /* TodoVM.swift */; };
 		50B7D73F2785159F0027B0C2 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D73D2785159E0027B0C2 /* CoreData.xcdatamodeld */; };
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500988C82787D03A001E5008 /* SSToastMessage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +138,9 @@
 			dependencies = (
 			);
 			name = Portfolio;
+			packageProductDependencies = (
+				500988C72787D03A001E5008 /* SSToastMessage */,
+			);
 			productName = Portfolio;
 			productReference = 50F2DE9E2780EA9B001F990B /* Portfolio.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +169,9 @@
 				Base,
 			);
 			mainGroup = 50F2DE952780EA9B001F990B;
+			packageReferences = (
+				500988C62787D02F001E5008 /* XCRemoteSwiftPackageReference "SSToastMessage" */,
+			);
 			productRefGroup = 50F2DE9F2780EA9B001F990B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -401,6 +409,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		500988C62787D02F001E5008 /* XCRemoteSwiftPackageReference "SSToastMessage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimformSolutionsPvtLtd/SSToastMessage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		500988C72787D03A001E5008 /* SSToastMessage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 500988C62787D02F001E5008 /* XCRemoteSwiftPackageReference "SSToastMessage" */;
+			productName = SSToastMessage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		50B7D73D2785159E0027B0C2 /* CoreData.xcdatamodeld */ = {

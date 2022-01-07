@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import SSToastMessage
 struct HomeView: View {
     @StateObject var vm = TodoVM()
     @State var showTodo = false
@@ -54,8 +54,8 @@ struct HomeView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(1..<10) { mod in
-                            SmallCard(subject: "career", title: "Update resume")
+                        ForEach(vm.savedData) { mod in
+                            SmallCard(subject: mod.subject!, title: mod.title!)
                         }
                     }
                 }
@@ -75,27 +75,20 @@ struct HomeView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(1..<10) { mod in
-                            SmallCard(subject: "App", title: "Weather App")
+                        ForEach(vm.savedIdea) { mod in
+                            SmallCard(subject: mod.subject!, title: mod.title!)
                         }
                     }
                 }
-              
-                
                 Spacer()
             }
-          
-            
-//            .sheet(isPresented: $showTodo) {
-//                AddTodoView()
-//            }
-//            .sheet(isPresented: $showIdea) {
-//                AddIdeasView(vm: vm)
-//            }
-            
-            if showIdea {
+            .present(isPresented: $showIdea, type: .alert, animation: Animation.interactiveSpring(), autohideDuration: nil, closeOnTap: false) {
                 AddIdeasView(vm: vm, showIdea: $showIdea)
             }
+            .present(isPresented: $showTodo, type: .alert, animation: Animation.interactiveSpring(), autohideDuration: nil, closeOnTap: false) {
+                AddTodoView(vm: vm, showTodo: $showTodo)
+            }
+            
 
         }
     }

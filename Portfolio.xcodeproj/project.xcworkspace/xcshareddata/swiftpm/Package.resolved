@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SSToastMessage",
+        "repositoryURL": "https://github.com/SimformSolutionsPvtLtd/SSToastMessage",
+        "state": {
+          "branch": null,
+          "revision": "6f8c15ae5347655a22651c94ed29a651c172e6ce",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

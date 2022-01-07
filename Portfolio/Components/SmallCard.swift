@@ -10,21 +10,33 @@ import SwiftUI
 struct SmallCard: View {
     var subject: String
     var title: String
+    @State var isDelete = false
     var body: some View {
         ZStack {
         RoundedRectangle(cornerRadius: 15.0)
             .frame(width: 140, height: 150)
             .foregroundColor(Color("CardBack"))
+            .onTapGesture(count: 2) {
+                isDelete = false
+            }
+            .onLongPressGesture {
+                isDelete = true
+            }
+           
             VStack(alignment: .leading) {
                 
                 HStack {
                 Spacer().frame(width: 105)
-                    Button {
-                        //
-                    } label: {
-                        Image(systemName: "x.circle.fill").opacity(0.6)
-                        .foregroundColor(.red)
-                        .padding(3)
+                    if isDelete {
+                        Button {
+                            //
+                        } label: {
+                            Image(systemName: "x.circle.fill").opacity(0.6)
+                            .foregroundColor(.red)
+                            .padding(3)
+                    }
+                    } else if isDelete == false {
+                        /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
                     }
                 }
                     
