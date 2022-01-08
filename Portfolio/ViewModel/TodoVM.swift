@@ -66,6 +66,23 @@ let container: NSPersistentContainer
           }
       }
     
+    func deleteTodo(titleTxt: String) {
+        for i in savedData {
+            if i.title == titleTxt {
+                container.viewContext.delete(i)
+                saveData()
+            }
+        }
+    }
+    func deleteIdea(titleTxt: String) {
+        for i in savedIdea {
+            if i.title == titleTxt {
+                container.viewContext.delete(i)
+                saveData()
+            }
+        }
+    }
+    
     
 
     

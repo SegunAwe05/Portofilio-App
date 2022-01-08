@@ -11,7 +11,8 @@ struct HomeView: View {
     @StateObject var vm = TodoVM()
     @State var showTodo = false
     @State var showIdea = false
-    
+    @State var showDeleted = false
+    @State var showAdded = false
     var body: some View {
         ZStack {
             Color("Phoric").edgesIgnoringSafeArea(.all)
@@ -55,7 +56,7 @@ struct HomeView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(vm.savedData) { mod in
-                            SmallCard(subject: mod.subject!, title: mod.title!)
+                            SmallCardTodo(subject: mod.subject!, title: mod.title!, vm: vm, showDeleted: $showDeleted)
                         }
                     }
                 }
@@ -76,19 +77,24 @@ struct HomeView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(vm.savedIdea) { mod in
-                            SmallCard(subject: mod.subject!, title: mod.title!)
+                            SmallCardIdeas(subject: mod.subject!, title: mod.title!, vm: vm, showDeleted: $showDeleted)
                         }
                     }
                 }
                 Spacer()
             }
             .present(isPresented: $showIdea, type: .alert, animation: Animation.interactiveSpring(), autohideDuration: nil, closeOnTap: false) {
-                AddIdeasView(vm: vm, showIdea: $showIdea)
+                AddIdeasView(vm: vm, showIdea: $showIdea, showAdded: $showAdded)
             }
             .present(isPresented: $showTodo, type: .alert, animation: Animation.interactiveSpring(), autohideDuration: nil, closeOnTap: false) {
-                AddTodoView(vm: vm, showTodo: $showTodo)
+                AddTodoView(vm: vm, showTodo: $showTodo, showAdded: $showAdded)
             }
-            
+            .present(isPresented: $showDeleted, type: .floater(verticalPadding: 60.0), position: .top, animation: Animation.easeInOut, autohideDuration: 5.0, closeOnTap: false) {
+                DeletedCard()
+            }
+            .present(isPresented: $showAdded, type: .floater(verticalPadding: 60.0), position: .top, animation: Animation.easeInOut, autohideDuration: 5.0, closeOnTap: false) {
+                AddedCard()
+            }
 
         }
     }

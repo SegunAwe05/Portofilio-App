@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		500988C82787D03A001E5008 /* SSToastMessage in Frameworks */ = {isa = PBXBuildFile; productRef = 500988C72787D03A001E5008 /* SSToastMessage */; };
-		50B7D73A278399000027B0C2 /* SmallCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D739278399000027B0C2 /* SmallCard.swift */; };
+		50811AA02789110B00120935 /* SmallCardIdeas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50811A9F2789110B00120935 /* SmallCardIdeas.swift */; };
+		50811AA22789147C00120935 /* DeletedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50811AA12789147C00120935 /* DeletedCard.swift */; };
+		50811AA42789186D00120935 /* AddedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50811AA32789186D00120935 /* AddedCard.swift */; };
+		50B7D73A278399000027B0C2 /* SmallCardTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D739278399000027B0C2 /* SmallCardTodo.swift */; };
 		50B7D73C2785156C0027B0C2 /* TodoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D73B2785156B0027B0C2 /* TodoVM.swift */; };
 		50B7D73F2785159F0027B0C2 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D73D2785159E0027B0C2 /* CoreData.xcdatamodeld */; };
 		50B7D74127851B630027B0C2 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D74027851B630027B0C2 /* AddTodoView.swift */; };
@@ -22,7 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		50B7D739278399000027B0C2 /* SmallCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCard.swift; sourceTree = "<group>"; };
+		50811A9F2789110B00120935 /* SmallCardIdeas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardIdeas.swift; sourceTree = "<group>"; };
+		50811AA12789147C00120935 /* DeletedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletedCard.swift; sourceTree = "<group>"; };
+		50811AA32789186D00120935 /* AddedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedCard.swift; sourceTree = "<group>"; };
+		50B7D739278399000027B0C2 /* SmallCardTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardTodo.swift; sourceTree = "<group>"; };
 		50B7D73B2785156B0027B0C2 /* TodoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoVM.swift; sourceTree = "<group>"; };
 		50B7D73E2785159E0027B0C2 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		50B7D74027851B630027B0C2 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
@@ -91,7 +97,10 @@
 			isa = PBXGroup;
 			children = (
 				50F2DEB22780FB47001F990B /* ButtonView.swift */,
-				50B7D739278399000027B0C2 /* SmallCard.swift */,
+				50B7D739278399000027B0C2 /* SmallCardTodo.swift */,
+				50811A9F2789110B00120935 /* SmallCardIdeas.swift */,
+				50811AA12789147C00120935 /* DeletedCard.swift */,
+				50811AA32789186D00120935 /* AddedCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -200,10 +209,13 @@
 			files = (
 				50F2DEB02780EEA2001F990B /* HomeView.swift in Sources */,
 				50F2DEA42780EA9B001F990B /* ContentView.swift in Sources */,
+				50811AA02789110B00120935 /* SmallCardIdeas.swift in Sources */,
+				50811AA42789186D00120935 /* AddedCard.swift in Sources */,
 				50B7D73C2785156C0027B0C2 /* TodoVM.swift in Sources */,
 				50F2DEB32780FB47001F990B /* ButtonView.swift in Sources */,
 				50F2DEA22780EA9B001F990B /* PortfolioApp.swift in Sources */,
-				50B7D73A278399000027B0C2 /* SmallCard.swift in Sources */,
+				50811AA22789147C00120935 /* DeletedCard.swift in Sources */,
+				50B7D73A278399000027B0C2 /* SmallCardTodo.swift in Sources */,
 				50B7D74327851B730027B0C2 /* AddIdeasView.swift in Sources */,
 				50B7D74127851B630027B0C2 /* AddTodoView.swift in Sources */,
 				50B7D73F2785159F0027B0C2 /* CoreData.xcdatamodeld in Sources */,

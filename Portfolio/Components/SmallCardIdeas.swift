@@ -1,16 +1,18 @@
 //
-//  smallCard.swift
+//  SmallCardIdeas.swift
 //  Portfolio
 //
-//  Created by Segun Awe on 1/3/22.
+//  Created by Segun Awe on 1/7/22.
 //
 
 import SwiftUI
 
-struct SmallCard: View {
+struct SmallCardIdeas: View {
     var subject: String
     var title: String
     @State var isDelete = false
+    @ObservedObject var vm: TodoVM
+    @Binding var showDeleted: Bool
     var body: some View {
         ZStack {
         RoundedRectangle(cornerRadius: 15.0)
@@ -29,7 +31,8 @@ struct SmallCard: View {
                 Spacer().frame(width: 105)
                     if isDelete {
                         Button {
-                            //
+                            vm.deleteIdea(titleTxt: title)
+                            showDeleted.toggle()
                         } label: {
                             Image(systemName: "x.circle.fill").opacity(0.6)
                             .foregroundColor(.red)
@@ -56,8 +59,8 @@ struct SmallCard: View {
     }
 }
 
-struct SmallCard_Previews: PreviewProvider {
+struct SmallCardIdeas_Previews: PreviewProvider {
     static var previews: some View {
-        SmallCard(subject: "Career", title: "Update Resume")
+        SmallCardIdeas(subject: "App", title: "Weather App", vm: TodoVM(), showDeleted: .constant(false))
     }
 }

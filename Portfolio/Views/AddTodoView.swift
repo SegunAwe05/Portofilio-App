@@ -12,6 +12,7 @@ struct AddTodoView: View {
     @State var subject = ""
     @State var title = ""
     @Binding var showTodo: Bool
+    @Binding var showAdded: Bool
     var body: some View {
      
         VStack {
@@ -45,6 +46,7 @@ struct AddTodoView: View {
                         if !subject.isEmpty && !title.isEmpty {
                             vm.addTodo(titleTxt: title, subjectTxt: subject)
                             showTodo.toggle()
+                            showAdded.toggle()
                             subject = ""
                             title = ""
                             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -76,6 +78,6 @@ struct AddTodoView: View {
 
 struct AddTodoView_Previews: PreviewProvider {
     static var previews: some View {
-        AddTodoView(vm: TodoVM(), showTodo: .constant(false))
+        AddTodoView(vm: TodoVM(), showTodo: .constant(false), showAdded: .constant(false))
     }
 }

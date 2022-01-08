@@ -12,6 +12,7 @@ struct AddIdeasView: View {
     @State var subject = ""
     @State var title = ""
     @Binding var showIdea: Bool
+    @Binding var showAdded: Bool
     var body: some View {
      
         VStack {
@@ -43,6 +44,7 @@ struct AddIdeasView: View {
                         if !subject.isEmpty && !title.isEmpty {
                             vm.addIdea(titleTxt: title, subjectTxt: subject)
                             showIdea.toggle()
+                            showAdded.toggle()
                             subject = ""
                             title = ""
                             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -75,6 +77,6 @@ struct AddIdeasView: View {
 
 struct AddIdeasView_Previews: PreviewProvider {
     static var previews: some View {
-        AddIdeasView(vm: TodoVM(), showIdea: .constant(true))
+        AddIdeasView(vm: TodoVM(), showIdea: .constant(true), showAdded: .constant(false))
     }
 }
