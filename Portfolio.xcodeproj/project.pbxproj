@@ -16,6 +16,9 @@
 		50B7D73F2785159F0027B0C2 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D73D2785159E0027B0C2 /* CoreData.xcdatamodeld */; };
 		50B7D74127851B630027B0C2 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D74027851B630027B0C2 /* AddTodoView.swift */; };
 		50B7D74327851B730027B0C2 /* AddIdeasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D74227851B730027B0C2 /* AddIdeasView.swift */; };
+		50E2FD57278A65E300926F00 /* ProjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2FD56278A65E300926F00 /* ProjectCard.swift */; };
+		50E2FD59278A79BA00926F00 /* ProjectsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2FD58278A79B700926F00 /* ProjectsVM.swift */; };
+		50E2FD5B278A7E8500926F00 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2FD5A278A7E8500926F00 /* AddProjectView.swift */; };
 		50F2DEA22780EA9B001F990B /* PortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F2DEA12780EA9B001F990B /* PortfolioApp.swift */; };
 		50F2DEA42780EA9B001F990B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F2DEA32780EA9B001F990B /* ContentView.swift */; };
 		50F2DEA62780EAA8001F990B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50F2DEA52780EAA8001F990B /* Assets.xcassets */; };
@@ -33,6 +36,9 @@
 		50B7D73E2785159E0027B0C2 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		50B7D74027851B630027B0C2 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		50B7D74227851B730027B0C2 /* AddIdeasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIdeasView.swift; sourceTree = "<group>"; };
+		50E2FD56278A65E300926F00 /* ProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCard.swift; sourceTree = "<group>"; };
+		50E2FD58278A79B700926F00 /* ProjectsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsVM.swift; sourceTree = "<group>"; };
+		50E2FD5A278A7E8500926F00 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 		50F2DE9E2780EA9B001F990B /* Portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F2DEA12780EA9B001F990B /* PortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioApp.swift; sourceTree = "<group>"; };
 		50F2DEA32780EA9B001F990B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 				50811A9F2789110B00120935 /* SmallCardIdeas.swift */,
 				50811AA12789147C00120935 /* DeletedCard.swift */,
 				50811AA32789186D00120935 /* AddedCard.swift */,
+				50E2FD56278A65E300926F00 /* ProjectCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -119,6 +126,7 @@
 				50F2DEAF2780EEA2001F990B /* HomeView.swift */,
 				50B7D74027851B630027B0C2 /* AddTodoView.swift */,
 				50B7D74227851B730027B0C2 /* AddIdeasView.swift */,
+				50E2FD5A278A7E8500926F00 /* AddProjectView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				50B7D73B2785156B0027B0C2 /* TodoVM.swift */,
+				50E2FD58278A79B700926F00 /* ProjectsVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -207,14 +216,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50E2FD5B278A7E8500926F00 /* AddProjectView.swift in Sources */,
 				50F2DEB02780EEA2001F990B /* HomeView.swift in Sources */,
 				50F2DEA42780EA9B001F990B /* ContentView.swift in Sources */,
 				50811AA02789110B00120935 /* SmallCardIdeas.swift in Sources */,
 				50811AA42789186D00120935 /* AddedCard.swift in Sources */,
+				50E2FD59278A79BA00926F00 /* ProjectsVM.swift in Sources */,
 				50B7D73C2785156C0027B0C2 /* TodoVM.swift in Sources */,
 				50F2DEB32780FB47001F990B /* ButtonView.swift in Sources */,
 				50F2DEA22780EA9B001F990B /* PortfolioApp.swift in Sources */,
 				50811AA22789147C00120935 /* DeletedCard.swift in Sources */,
+				50E2FD57278A65E300926F00 /* ProjectCard.swift in Sources */,
 				50B7D73A278399000027B0C2 /* SmallCardTodo.swift in Sources */,
 				50B7D74327851B730027B0C2 /* AddIdeasView.swift in Sources */,
 				50B7D74127851B630027B0C2 /* AddTodoView.swift in Sources */,

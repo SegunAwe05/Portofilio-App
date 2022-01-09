@@ -4,12 +4,21 @@
         <attribute name="subject" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="ProjectEntity" representedClassName="ProjectEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="cardColor" optional="YES" attributeType="String"/>
+        <attribute name="githubLink" optional="YES" attributeType="String"/>
+        <attribute name="pictures" optional="YES" attributeType="Transformable"/>
+        <attribute name="projectDescrip" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="video" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="TodoEntity" representedClassName="TodoEntity" syncable="YES" codeGenerationType="class">
         <attribute name="subject" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="TodoEntity" positionX="-63" positionY="-18" width="128" height="59"/>
         <element name="IdeaEntity" positionX="-54" positionY="9" width="128" height="59"/>
+        <element name="TodoEntity" positionX="-63" positionY="-18" width="128" height="59"/>
+        <element name="ProjectEntity" positionX="-54" positionY="9" width="128" height="119"/>
     </elements>
 </model>
