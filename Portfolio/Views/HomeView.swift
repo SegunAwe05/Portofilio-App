@@ -98,13 +98,16 @@ struct HomeView: View {
                     }.padding(5)
                         .padding(.horizontal)
                     
-                    ForEach(1..<10) { _ in
-                        ProjectCard(title: "Planet Terp", description: "Based on https://planetterp.com/ which is a Professor review site for professors at the University of Maryland to benefit UMD Terps")
+                    ForEach(vmProject.savedProjects) { mod in
+                        NavigationLink(destination: ProjectView()) {
+                            ProjectCard(title: mod.title ?? "Title", description: mod.projectDescrip ?? "Description", hexColor: mod.cardColor ?? "#000000")
+                        }
                             //.padding(.trailing, 30)
                     }
                     Spacer()
                 }
-            }
+            }.navigationBarTitle("")
+                .navigationBarHidden(true)
                 .present(isPresented: $showIdea, type: .alert, animation: Animation.interactiveSpring(), autohideDuration: nil, closeOnTap: false) {
                     AddIdeasView(vm: vm, showIdea: $showIdea, showAdded: $showAdded)
                 }
@@ -118,7 +121,7 @@ struct HomeView: View {
                     AddedCard()
                 }
                 .sheet(isPresented: $showAddProject) {
-                    AddProjectView()
+                    AddProjectView(vm: vmProject, showAddProject: $showAddProject)
                 }
             
         }

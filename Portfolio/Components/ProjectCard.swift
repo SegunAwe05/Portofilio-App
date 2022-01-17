@@ -10,6 +10,8 @@ import SwiftUI
 struct ProjectCard: View {
     var title: String
     var description: String
+    var hexColor: String
+
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
@@ -20,17 +22,18 @@ struct ProjectCard: View {
                 Spacer().frame(height: 10)
                 Text(description)
                     .foregroundColor(.primary)
+                    .multilineTextAlignment(.leading)
             }.frame(width: 320, height: 130, alignment: .topLeading)
                 
         }.frame(width: 350, height: 150)
             .padding(5)
-            .background(Color.purple.opacity(0.4))
-            .cornerRadius(10)
+            .background(Color(UIColor(hexString: hexColor)).opacity(0.4))
+            .cornerRadius(15)
     }
 }
 
 struct ProjectCard_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectCard(title: "Planet Terp", description: "Based on https://planetterp.com/ which is a Professor review site for professors at the University of Maryland to benefit UMD Terps")
+        ProjectCard(title: "Planet Terp", description: "Based on https://planetterp.com/ which is a Professor review site for professors at the University of Maryland to benefit UMD Terps", hexColor: "#0061fe")
     }
 }

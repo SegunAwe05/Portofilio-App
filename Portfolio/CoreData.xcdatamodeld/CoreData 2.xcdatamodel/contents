@@ -4,8 +4,8 @@
         <attribute name="subject" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="ProjectEntity" representedClassName="ProjectEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="cardColor" optional="YES" attributeType="String"/>
+    <entity name="ProjectEntity" representedClassName="ProjectEntity" syncable="YES">
+        <attribute name="cardColor" optional="YES" attributeType="Binary"/>
         <attribute name="githubLink" optional="YES" attributeType="String"/>
         <attribute name="pictures" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformer" customClassName="[Data]"/>
         <attribute name="projectDescrip" optional="YES" attributeType="String"/>

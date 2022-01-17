@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 
 class ProjectsVM: ObservableObject {
@@ -34,14 +35,19 @@ class ProjectsVM: ObservableObject {
         }
     }
     
-    func addProject(titleTxt: String, videoTxt: String, projectDescripTxt: String, cardColorTxt: String, github: String) {
+    func addProject(titleTxt: String, videoTxt: String, projectDescripTxt: String, cardColorTxt: String, github: String, picturesData: [UIImage]) {
         let entity = ProjectEntity(context: container.viewContext)
         entity.title = titleTxt
         entity.video = videoTxt
         entity.projectDescrip = projectDescripTxt
         entity.cardColor = cardColorTxt
+        print("color is done")
         entity.githubLink = github
-       // entity.pictures = picturesData
+        
+        picturesData.forEach({ im in
+            entity.pictures?.append(im.jpegData(compressionQuality: 1)!)
+        })
+      
         saveData()
         
     }

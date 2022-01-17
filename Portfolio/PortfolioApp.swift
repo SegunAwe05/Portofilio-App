@@ -11,8 +11,13 @@ import SwiftUI
 struct PortfolioApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
-            
+            NavigationView {
+                HomeView()
+            }
         }
     }
+    init() {
+        UIColorValueTransformer.register()
+    }
 }
+    
