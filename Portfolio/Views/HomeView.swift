@@ -101,7 +101,7 @@ struct HomeView: View {
                         .padding(.horizontal)
                     
                     ForEach(vmProject.savedProjects) { mod in
-                        NavigationLink(destination: ProjectView(title: mod.title ?? "No Title provided", imgNum: mod.imgCount, descriptionTxt: mod.projectDescrip ?? "No description provided",  hexColor: mod.cardColor ?? "#000000", git: mod.githubLink ?? "No Link provided", vm: vmProject)) {
+                        NavigationLink(destination: ProjectView(title: mod.title ?? "No Title provided", imgNum: mod.imgCount, descriptionTxt: mod.projectDescrip ?? "No description provided",  hexColor: mod.cardColor ?? "#000000", git: mod.githubLink ?? "No Link provided", videoLink: mod.video ?? "NA", vm: vmProject)) {
                             ProjectCard(title: mod.title ?? "Title", description: mod.projectDescrip ?? "Description", hexColor: mod.cardColor ?? "#000000", vm: vmProject)
                             
                         }

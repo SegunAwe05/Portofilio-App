@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-
+import AVKit
 
 
 struct ProjectView: View {
@@ -17,25 +17,28 @@ struct ProjectView: View {
     var pracImages: [String] = ["myImg1", "myImg2"]
     var hexColor: String
     var git: String
+    var videoLink: String!
+    @State var player = AVPlayer()
     @State var readMe = false
     @ObservedObject var vm: ProjectsVM
     @Environment( \.presentationMode) var goBack
     
     var body: some View {
         ZStack {
-      
-            if(pracImages.isEmpty) {
+            
+            if(vm.imgData.isEmpty) {
                 ProgressView().progressViewStyle(CircularProgressViewStyle())
             } else {
                 ScrollView {
                     TabView {
-                        ForEach(pracImages, id: \.self) { mod in
-                            Image(mod)
-                            //                        Image(uiImage: mod)
+                        ForEach(vm.imgData, id: \.self) { mod in
+                            //  Image(mod)
+                            Image(uiImage: mod)
                                 .resizable()
                                 .scaledToFill()
                         }
                         // place video player here
+                        VideoPlayer(player: player)
                     }
                     .frame(width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.height)
                     .tabViewStyle(PageTabViewStyle())
@@ -74,7 +77,7 @@ struct ProjectView: View {
                         .clipShape(Circle())
                 }.padding(8)
             }.padding(.bottom, 20)
-        
+            
             if readMe {
                 readmeView(title: title, descrip: descriptionTxt, githubLink: git, readMe: $readMe)
                 
@@ -83,13 +86,15 @@ struct ProjectView: View {
             
         } .edgesIgnoringSafeArea(.all)
         
-        //            .onAppear() {
-//                vm.retImage(title: title, num: imgNum)
-//
-//            }
-//            .onDisappear() {
-//                vm.imgData.removeAll()
-//            }
+            .onAppear() {
+                vm.retImage(title: title, num: imgNum)
+                player = AVPlayer(url: URL(string: videoLink)!)
+                
+                
+            }
+            .onDisappear() {
+                vm.imgData.removeAll()
+            }
             .navigationBarTitle("")
             .navigationBarHidden(true)
         
