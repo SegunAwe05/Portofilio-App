@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct AddedCard: View {
+    var text: String
     var body: some View {
         VStack {
-            Text("Your Item has been added")
+            Text(text)
                 .foregroundColor(.primary)
         }.frame(width: 200, height: 100)
             .padding(7)
@@ -21,6 +22,6 @@ struct AddedCard: View {
 
 struct AddedCard_Previews: PreviewProvider {
     static var previews: some View {
-        AddedCard()
+        AddedCard(text: "Your Item has been added")
     }
 }

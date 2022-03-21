@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="IdeaEntityTwo" representedClassName="IdeaEntityTwo" syncable="YES" codeGenerationType="class">
+        <attribute name="subject" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ProjectEntityTwo" representedClassName="ProjectEntityTwo" syncable="YES" codeGenerationType="class">
+        <attribute name="cardColor" optional="YES" attributeType="String"/>
+        <attribute name="githubLink" optional="YES" attributeType="String"/>
+        <attribute name="imgCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="projectDescrip" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="video" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TodoEntityTwo" representedClassName="TodoEntityTwo" syncable="YES" codeGenerationType="class">
+        <attribute name="subject" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="UserPhoto" representedClassName="UserPhoto" syncable="YES" codeGenerationType="class">
+        <attribute name="userPicture" optional="YES" attributeType="Binary"/>
+    </entity>
+    <elements>
+        <element name="IdeaEntityTwo" positionX="-63" positionY="-18" width="128" height="59"/>
+        <element name="ProjectEntityTwo" positionX="-294.20849609375" positionY="75.5079345703125" width="128" height="119"/>
+        <element name="TodoEntityTwo" positionX="-254.8140258789062" positionY="-70.69244384765625" width="128" height="59"/>
+        <element name="UserPhoto" positionX="-14.576416015625" positionY="141.9583129882812" width="128" height="44"/>
+    </elements>
+</model>

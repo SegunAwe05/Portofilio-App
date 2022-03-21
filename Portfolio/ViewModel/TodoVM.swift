@@ -10,11 +10,11 @@ import CoreData
 class TodoVM: ObservableObject {
     
 let container: NSPersistentContainer
-    @Published var savedData: [TodoEntity] = []
-    @Published var savedIdea: [IdeaEntity] = []
+    @Published var savedData: [TodoEntityTwo] = []
+    @Published var savedIdea: [IdeaEntityTwo] = []
     
     init() {
-        container = NSPersistentContainer(name: "CoreData")
+        container = NSPersistentContainer(name: "ProjectCoreData")
         container.loadPersistentStores { description, error in
             if let error = error {
                 print("error loading data \(error)")
@@ -25,7 +25,7 @@ let container: NSPersistentContainer
     }
     
     func fetchTodoData() {
-        let request = NSFetchRequest<TodoEntity>(entityName: "TodoEntity")
+        let request = NSFetchRequest<TodoEntityTwo>(entityName: "TodoEntityTwo")
         do {
             savedData = try container.viewContext.fetch(request)
         } catch let error {
@@ -34,7 +34,7 @@ let container: NSPersistentContainer
     }
     // fetching Idea Data
     func fetchIdeaData() {
-        let request = NSFetchRequest<IdeaEntity>(entityName: "IdeaEntity")
+        let request = NSFetchRequest<IdeaEntityTwo>(entityName: "IdeaEntityTwo")
         do {
             savedIdea = try container.viewContext.fetch(request)
         } catch let error {
@@ -43,14 +43,14 @@ let container: NSPersistentContainer
     }
     
     func addTodo(titleTxt: String, subjectTxt: String) {
-        let entity = TodoEntity(context: container.viewContext)
+        let entity = TodoEntityTwo(context: container.viewContext)
         entity.subject = subjectTxt
         entity.title = titleTxt
         saveData()
     }
     
     func addIdea(titleTxt: String, subjectTxt: String) {
-        let entity = IdeaEntity(context: container.viewContext)
+        let entity = IdeaEntityTwo(context: container.viewContext)
         entity.subject = subjectTxt
         entity.title = titleTxt
         saveData()

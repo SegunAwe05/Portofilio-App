@@ -15,6 +15,8 @@ struct HomeView: View {
     @State var showDeleted = false
     @State var showAdded = false
     @State var showAddProject = false
+    @State var isProjectAdded = false
+    @State public var imgTube: Data = .init(count: 0)
     var body: some View {
         ZStack {
             Color("Phoric").edgesIgnoringSafeArea(.all)
@@ -99,11 +101,12 @@ struct HomeView: View {
                         .padding(.horizontal)
                     
                     ForEach(vmProject.savedProjects) { mod in
-                        NavigationLink(destination: ProjectView()) {
-                            ProjectCard(title: mod.title ?? "Title", description: mod.projectDescrip ?? "Description", hexColor: mod.cardColor ?? "#000000")
+                        NavigationLink(destination: ProjectView(title: mod.title ?? "No Title provided", imgNum: mod.imgCount, descriptionTxt: mod.projectDescrip ?? "No description provided",  hexColor: mod.cardColor ?? "#000000", git: mod.githubLink ?? "No Link provided", vm: vmProject)) {
+                            ProjectCard(title: mod.title ?? "Title", description: mod.projectDescrip ?? "Description", hexColor: mod.cardColor ?? "#000000", vm: vmProject)
+                            
                         }
-                            //.padding(.trailing, 30)
                     }
+                    
                     Spacer()
                 }
             }.navigationBarTitle("")
@@ -118,11 +121,17 @@ struct HomeView: View {
                     DeletedCard()
                 }
                 .present(isPresented: $showAdded, type: .floater(verticalPadding: 60.0), position: .top, animation: Animation.easeInOut, autohideDuration: 5.0, closeOnTap: false) {
-                    AddedCard()
+                    AddedCard(text: "Your Item has been added")
+                }
+                .present(isPresented: $isProjectAdded, type: .floater(verticalPadding: 60.0), position: .top, animation: Animation.easeInOut, autohideDuration: 5.0, closeOnTap: false) {
+                    AddedCard(text: "Your project has been added")
                 }
                 .sheet(isPresented: $showAddProject) {
-                    AddProjectView(vm: vmProject, showAddProject: $showAddProject)
+                 
+                    AddProjectView(vm: vmProject, showAddProject: $showAddProject, isProjectAdded: $isProjectAdded)
                 }
+             
+                
             
         }
     }

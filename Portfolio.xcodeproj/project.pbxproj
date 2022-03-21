@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505EEC6C27E7EE0C00B67359 /* readmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505EEC6B27E7EE0500B67359 /* readmeView.swift */; };
 		50811AA02789110B00120935 /* SmallCardIdeas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50811A9F2789110B00120935 /* SmallCardIdeas.swift */; };
 		50811AA22789147C00120935 /* DeletedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50811AA12789147C00120935 /* DeletedCard.swift */; };
 		50811AA42789186D00120935 /* AddedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50811AA32789186D00120935 /* AddedCard.swift */; };
 		50B7D73A278399000027B0C2 /* SmallCardTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D739278399000027B0C2 /* SmallCardTodo.swift */; };
 		50B7D73C2785156C0027B0C2 /* TodoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D73B2785156B0027B0C2 /* TodoVM.swift */; };
-		50B7D73F2785159F0027B0C2 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D73D2785159E0027B0C2 /* CoreData.xcdatamodeld */; };
 		50B7D74127851B630027B0C2 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D74027851B630027B0C2 /* AddTodoView.swift */; };
 		50B7D74327851B730027B0C2 /* AddIdeasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D74227851B730027B0C2 /* AddIdeasView.swift */; };
-		50CCDC0E2790BF620006344C /* CustomTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCDC0D2790BF610006344C /* CustomTransformer.swift */; };
 		50CCDC102790CF960006344C /* PHP Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCDC0F2790CF950006344C /* PHP Picker.swift */; };
 		50CCDC122790EBA60006344C /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCDC112790EBA60006344C /* ProjectView.swift */; };
-		50CCDC152790ED510006344C /* SSToastMessage in Frameworks */ = {isa = PBXBuildFile; productRef = 50CCDC142790ED510006344C /* SSToastMessage */; };
+		50D6690C279641E1009731CF /* ProjectCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50D6690A279641E1009731CF /* ProjectCoreData.xcdatamodeld */; };
 		50E2FD57278A65E300926F00 /* ProjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2FD56278A65E300926F00 /* ProjectCard.swift */; };
 		50E2FD59278A79BA00926F00 /* ProjectsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2FD58278A79B700926F00 /* ProjectsVM.swift */; };
 		50E2FD5B278A7E8500926F00 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2FD5A278A7E8500926F00 /* AddProjectView.swift */; };
@@ -28,21 +27,21 @@
 		50F2DEA92780EAA8001F990B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50F2DEA82780EAA8001F990B /* Preview Assets.xcassets */; };
 		50F2DEB02780EEA2001F990B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F2DEAF2780EEA2001F990B /* HomeView.swift */; };
 		50F2DEB32780FB47001F990B /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F2DEB22780FB47001F990B /* ButtonView.swift */; };
+		50F6768027C09F35007FA871 /* SSToastMessage in Frameworks */ = {isa = PBXBuildFile; productRef = 50F6767F27C09F35007FA871 /* SSToastMessage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		505EEC6B27E7EE0500B67359 /* readmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = readmeView.swift; sourceTree = "<group>"; };
 		50811A9F2789110B00120935 /* SmallCardIdeas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardIdeas.swift; sourceTree = "<group>"; };
 		50811AA12789147C00120935 /* DeletedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletedCard.swift; sourceTree = "<group>"; };
 		50811AA32789186D00120935 /* AddedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedCard.swift; sourceTree = "<group>"; };
 		50B7D739278399000027B0C2 /* SmallCardTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardTodo.swift; sourceTree = "<group>"; };
 		50B7D73B2785156B0027B0C2 /* TodoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoVM.swift; sourceTree = "<group>"; };
-		50B7D73E2785159E0027B0C2 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		50B7D74027851B630027B0C2 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		50B7D74227851B730027B0C2 /* AddIdeasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIdeasView.swift; sourceTree = "<group>"; };
-		50CCDC0D2790BF610006344C /* CustomTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransformer.swift; sourceTree = "<group>"; };
 		50CCDC0F2790CF950006344C /* PHP Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHP Picker.swift"; sourceTree = "<group>"; };
 		50CCDC112790EBA60006344C /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
-		50CCDC1627924F940006344C /* CoreData 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreData 2.xcdatamodel"; sourceTree = "<group>"; };
+		50D6690B279641E1009731CF /* ProjectCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectCoreData.xcdatamodel; sourceTree = "<group>"; };
 		50E2FD56278A65E300926F00 /* ProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCard.swift; sourceTree = "<group>"; };
 		50E2FD58278A79B700926F00 /* ProjectsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsVM.swift; sourceTree = "<group>"; };
 		50E2FD5A278A7E8500926F00 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
@@ -60,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50CCDC152790ED510006344C /* SSToastMessage in Frameworks */,
+				50F6768027C09F35007FA871 /* SSToastMessage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +99,6 @@
 				50F2DEB42780FB88001F990B /* Model */,
 				50F2DEB12780F962001F990B /* Components */,
 				50F2DEA52780EAA8001F990B /* Assets.xcassets */,
-				50B7D73D2785159E0027B0C2 /* CoreData.xcdatamodeld */,
 				50F2DEA72780EAA8001F990B /* Preview Content */,
 			);
 			path = Portfolio;
@@ -110,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				50F2DEA82780EAA8001F990B /* Preview Assets.xcassets */,
+				50D6690A279641E1009731CF /* ProjectCoreData.xcdatamodeld */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -123,6 +122,7 @@
 				50811AA12789147C00120935 /* DeletedCard.swift */,
 				50811AA32789186D00120935 /* AddedCard.swift */,
 				50E2FD56278A65E300926F00 /* ProjectCard.swift */,
+				505EEC6B27E7EE0500B67359 /* readmeView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -152,7 +152,6 @@
 			children = (
 				50B7D73B2785156B0027B0C2 /* TodoVM.swift */,
 				50E2FD58278A79B700926F00 /* ProjectsVM.swift */,
-				50CCDC0D2790BF610006344C /* CustomTransformer.swift */,
 				50CCDC0F2790CF950006344C /* PHP Picker.swift */,
 			);
 			path = ViewModel;
@@ -175,7 +174,7 @@
 			);
 			name = Portfolio;
 			packageProductDependencies = (
-				50CCDC142790ED510006344C /* SSToastMessage */,
+				50F6767F27C09F35007FA871 /* SSToastMessage */,
 			);
 			productName = Portfolio;
 			productReference = 50F2DE9E2780EA9B001F990B /* Portfolio.app */;
@@ -242,7 +241,6 @@
 				50811AA42789186D00120935 /* AddedCard.swift in Sources */,
 				50E2FD59278A79BA00926F00 /* ProjectsVM.swift in Sources */,
 				50B7D73C2785156C0027B0C2 /* TodoVM.swift in Sources */,
-				50CCDC0E2790BF620006344C /* CustomTransformer.swift in Sources */,
 				50F2DEB32780FB47001F990B /* ButtonView.swift in Sources */,
 				50F2DEA22780EA9B001F990B /* PortfolioApp.swift in Sources */,
 				50811AA22789147C00120935 /* DeletedCard.swift in Sources */,
@@ -250,7 +248,8 @@
 				50B7D73A278399000027B0C2 /* SmallCardTodo.swift in Sources */,
 				50B7D74327851B730027B0C2 /* AddIdeasView.swift in Sources */,
 				50B7D74127851B630027B0C2 /* AddTodoView.swift in Sources */,
-				50B7D73F2785159F0027B0C2 /* CoreData.xcdatamodeld in Sources */,
+				50D6690C279641E1009731CF /* ProjectCoreData.xcdatamodeld in Sources */,
+				505EEC6C27E7EE0C00B67359 /* readmeView.swift in Sources */,
 				50CCDC102790CF960006344C /* PHP Picker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,7 +466,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		50CCDC142790ED510006344C /* SSToastMessage */ = {
+		50F6767F27C09F35007FA871 /* SSToastMessage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 500988C62787D02F001E5008 /* XCRemoteSwiftPackageReference "SSToastMessage" */;
 			productName = SSToastMessage;
@@ -475,14 +474,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		50B7D73D2785159E0027B0C2 /* CoreData.xcdatamodeld */ = {
+		50D6690A279641E1009731CF /* ProjectCoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				50CCDC1627924F940006344C /* CoreData 2.xcdatamodel */,
-				50B7D73E2785159E0027B0C2 /* CoreData.xcdatamodel */,
+				50D6690B279641E1009731CF /* ProjectCoreData.xcdatamodel */,
 			);
-			currentVersion = 50B7D73E2785159E0027B0C2 /* CoreData.xcdatamodel */;
-			path = CoreData.xcdatamodeld;
+			currentVersion = 50D6690B279641E1009731CF /* ProjectCoreData.xcdatamodel */;
+			path = ProjectCoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
