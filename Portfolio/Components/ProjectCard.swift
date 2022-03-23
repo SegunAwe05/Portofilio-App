@@ -29,9 +29,10 @@ struct ProjectCard: View {
             .padding(5)
             .background(Color(UIColor(hexString: hexColor)).opacity(0.4))
             .cornerRadius(15)
-//            .onLongPressGesture {
-//                vm.deleteProject(titleTxt: title)
-//            }
+
+            .onTapGesture(count: 2) {
+                vm.deleteProject(titleTxt: title)
+            }
     }
         
 }
