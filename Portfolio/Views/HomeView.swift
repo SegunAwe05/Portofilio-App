@@ -62,6 +62,7 @@ struct HomeView: View {
                         HStack {
                             ForEach(vm.savedData) { mod in
                                 SmallCardTodo(subject: mod.subject!, title: mod.title!, vm: vm, showDeleted: $showDeleted)
+                                Spacer()
                             }
                         }.padding(.horizontal)
                     }
@@ -83,6 +84,7 @@ struct HomeView: View {
                         HStack {
                             ForEach(vm.savedIdea) { mod in
                                 SmallCardIdeas(subject: mod.subject!, title: mod.title!, vm: vm, showDeleted: $showDeleted)
+                                Spacer()
                             }
                         }.padding(.horizontal)
                     }
