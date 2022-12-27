@@ -89,6 +89,9 @@ struct ProjectView: View {
             .onAppear() {
                 vm.retImage(title: title, num: imgNum)
                 player = AVPlayer(url: URL(string: videoLink)!)
+                player.play()
+                
+                
                 
                 
             }
